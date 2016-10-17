@@ -93,14 +93,13 @@ words
 let alpha : CharacterSet = .alphanumerics
 let alphaWords = sentence.unicodeScalars.split { !alpha.contains($0) }.reversed().map { String($0) }
 alphaWords
+
+// but the alphanumeric character set excludes emoji! Oh no!
 let whitespace : CharacterSet = .whitespacesAndNewlines
 let punc : CharacterSet = .punctuationCharacters
 let whitespaceAndPunc = whitespace.union(punc)
 let betterWords = sentence.unicodeScalars.split { whitespaceAndPunc.contains($0) }.reversed().map { String($0) }
 betterWords
-
-
-
 
 
 
