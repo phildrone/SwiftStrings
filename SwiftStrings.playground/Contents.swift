@@ -81,7 +81,7 @@ char16
 // But then there's no init method for a String taking an array of UTF16. We'd need to construct
 // one and extend String, which I'm not going to do, but it can be done.
 
-// A variation on the reverse a string question above is to take a sentance, and reverse the words.
+// A variation on the reverse a string question above is to take a sentence, and reverse the words.
 let sentence = "Hello, 🌎!"
 let words = sentence.characters.split(separator: " ").reversed().map{ String($0) }
 words
