@@ -82,8 +82,8 @@ char16
 // one and extend String, which I'm not going to do, but it can be done.
 
 // A variation on the reverse a string question above is to take a sentance, and reverse the words.
-let sentance = "Hello, 🌎!"
-let words = sentance.characters.split(separator: " ").reversed().map{ String($0) }
+let sentence = "Hello, 🌎!"
+let words = sentence.characters.split(separator: " ").reversed().map{ String($0) }
 words
 
 
@@ -91,12 +91,12 @@ words
 // We could use something similar to
 // https://oleb.net/blog/2016/08/swift-3-strings/
 let alpha : CharacterSet = .alphanumerics
-let alphaWords = sentance.unicodeScalars.split { !alpha.contains($0) }.reversed().map { String($0) }
+let alphaWords = sentence.unicodeScalars.split { !alpha.contains($0) }.reversed().map { String($0) }
 alphaWords
 let whitespace : CharacterSet = .whitespacesAndNewlines
 let punc : CharacterSet = .punctuationCharacters
 let whitespaceAndPunc = whitespace.union(punc)
-let betterWords = sentance.unicodeScalars.split { whitespaceAndPunc.contains($0) }.reversed().map { String($0) }
+let betterWords = sentence.unicodeScalars.split { whitespaceAndPunc.contains($0) }.reversed().map { String($0) }
 betterWords
 
 
